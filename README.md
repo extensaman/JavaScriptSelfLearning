@@ -9,3 +9,6 @@ Task03 (https://learn.javascript.ru/searching-elements-dom)
 
 Task04 (https://learn.javascript.ru/basic-dom-node-properties)
 Свойства узлов: тип, тег и содержимое (nodeType, nodeName и tagName, innerHTML, outerHTML, nodeValue/data, hidden)
+
+Task05 (https://learn.javascript.ru/dom-attributes-and-properties)
+Атрибуты и свойства
