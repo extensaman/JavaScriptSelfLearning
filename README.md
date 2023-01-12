@@ -13,8 +13,5 @@ Task 04 (https://learn.javascript.ru/basic-dom-node-properties)
 Task05 (https://learn.javascript.ru/dom-attributes-and-properties)
 Атрибуты и свойства
 
-Task 05 (https://learn.javascript.ru/dom-attributes-and-properties)
-Атрибуты и свойства
-
 Task 06 (https://learn.javascript.ru/modifying-document)
 Изменение документа
