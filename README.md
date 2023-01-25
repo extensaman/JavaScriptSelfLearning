@@ -15,3 +15,6 @@ Task05 (https://learn.javascript.ru/dom-attributes-and-properties)
 
 Task 06, 07, 08 (https://learn.javascript.ru/modifying-document)
 Изменение документа
+
+Task 09 (https://learn.javascript.ru/introduction-browser-events)
+Введение в браузерные события

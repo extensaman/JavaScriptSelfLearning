@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 09</title>
+</head>
+<body>
+    <input value="Press me!" type="button" id="inputId">
+    <button id="buttonId">Написано на кнопке</button>
+    <script>
+        class ButtonEventHandler {
+            handleEvent(event){
+                switch(event.type){
+                    case 'mousedown':
+                        event.currentTarget.innerHTML = "Mouse down";
+                        break;
+                    case 'mouseup':
+                        event.currentTarget.innerHTML = "Mouse up";
+                        break;  
+                    case 'mouseout':
+                        event.currentTarget.innerHTML='Написано на кнопке';
+                        break;
+                    case 'mouseover':
+                        event.currentTarget.style.backgroundColor = "red";
+                        break;
+                }
+            }
+        }
+
+        let buttonHandler = new ButtonEventHandler();
+        buttonElement = document.getElementById('buttonId');
+        buttonElement.addEventListener('mousedown',buttonHandler);
+        buttonElement.addEventListener('mouseup',buttonHandler);
+        buttonElement.addEventListener('mouseout',buttonHandler);
+        buttonElement.addEventListener('mouseover',buttonHandler);
+
+        inputElement = document.getElementById('inputId');
+        // Назначение обработчика для click через addEventListener
+        inputElement.addEventListener("click", (event)=>alert('Input value = ' + 
+                event.currentTarget.value + '\n' + 
+                'Event type = ' + event.type + '\n' + 
+                'Mouse coordX = ' + event.clientX + '\n' + 
+                'Mouse coordY = ' + event.clientY));
+        // Вешаем еще один обработчик на это же событие
+        inputElement.addEventListener("click", ()=>alert('Second handler'));
+        
+        // Назначение еще одного обработчика через свойство onclick элемента
+        inputElement.onclick = function() {
+            alert(this.value);
+        }
+
+        // Обработчик события завершения полной загрузки DOM (вызовется самым первым)
+        document.addEventListener("DOMContentLoaded", ()=>alert("DOM loaded"));
+    </script>
+</body>
+</html>
